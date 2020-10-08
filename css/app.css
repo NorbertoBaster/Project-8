@@ -1,0 +1,251 @@
+.modal, .card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E1E1E1;
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.4s;
+}
+@media (min-width: 768px) {
+  .modal, .card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+}
+.modal:hover, .card:hover {
+  border-color: #4c7db6;
+}
+
+.modal {
+  display: block;
+  padding: 50px 40px;
+  position: relative;
+  max-width: 375px;
+  margin: 5% auto auto;
+  text-align: center;
+  cursor: auto;
+}
+
+.modal__right, .modal__left, .modal__close {
+  -webkit-appearance: none;
+  outline: 0;
+  border: none;
+  background: none;
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.7em;
+  opacity: 0.18;
+  transition: opacity 0.4s;
+}
+.modal__right:hover, .modal__left:hover, .modal__close:hover {
+  opacity: 1;
+}
+
+#search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  padding: 8px 10px;
+  transition: border 0.4s;
+  width: 100%;
+  display: block;
+  font-size: 0.85em;
+  color: #979CA0;
+}
+@media (min-width: 768px) {
+  #search {
+    max-width: 350px;
+  }
+}
+#search:focus {
+  outline: 0;
+  border-color: #4c7db6;
+}
+#search::placeholder {
+  color: #979CA0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Piazzolla', serif;
+  font-size: 16px;
+  background: white;
+  color: #737373;
+  padding: 10vh 2.5% 5vh;
+  position: relative;
+}
+@media (min-width: 768px) {
+  body {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media (min-width: 2560px) {
+  body {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  margin: 35px 0;
+  outline: 0;
+  border: none;
+  height: 1px;
+  background-color: #E3E3E3;
+}
+
+header {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 40px;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card__name {
+  margin: 0 0 10px;
+}
+.card__email, .card__location {
+  margin: 0 0 10px;
+}
+.card .card__details p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .card__image {
+    flex: 0 100px;
+    margin-right: 20px;
+  }
+}
+
+.photo {
+  border-radius: 50%;
+}
+
+.title {
+  margin: 0 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.card__name {
+  font-size: 1.05em;
+  color: #4A535A;
+}
+.card__email, .card__location, .card__phone, .card__address, .card__birthday {
+  font-size: 0.85em;
+  color: #979CA0;
+}
+
+#search {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  #search {
+    margin-bottom: 0;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.modal .card__image {
+  flex-basis: 128px;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+.modal .card__name {
+  font-size: 1.1em;
+}
+.modal .card__email, .modal .card__location, .modal .card__phone, .modal .card__address, .modal .card__birthday {
+  font-size: 0.9em;
+}
+.modal .card__name, .modal .card__email, .modal .card__location {
+  margin-bottom: 12px;
+}
+.modal .card__phone, .modal .card__address {
+  margin-bottom: 16px;
+}
+.modal .card__details p:last-child {
+  margin-bottom: 0;
+}
+
+.modal__close {
+  top: 8px;
+  right: 50px;
+  color: #333333;
+  text-shadow: 0 1px 0 #333333;
+  opacity: 1;
+  font-size: 1em;
+}
+.modal__left {
+  top: 101px;
+  left: 30px;
+}
+.modal__right {
+  top: 101px;
+  right: 30px;
+}
+
+
